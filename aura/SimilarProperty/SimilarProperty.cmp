@@ -2,7 +2,7 @@
  - Created by adam on 24/03/19.
  -->
 
-<aura:component >
+<aura:component>
     <aura:attribute name="property" type="Property__c"/>
     <lightning:recordViewForm aura:id="viewForm" recordId="{!v.property.Id}" objectApiName="Property__c">
         <div class="slds-media">
@@ -14,6 +14,7 @@
                     <a onclick="{!c.navToRecord}">
                         <h3 class="slds-text-heading_small slds-m-bottom_xx-small">{!v.property.Name}</h3>
                     </a>
+                    <lightning:buttonIcon iconName="utility:edit" class="slds-col_bump-left" iconClass="slds-button__icon_hint" variant="bare" alternativeText="Edit Record" onclick="{!c.editRecord}"/>
                 </lightning:layout>
                 <lightning:layout multipleRows="true">
                     <lightning:layoutItem size="6">
@@ -25,7 +26,7 @@
                     <lightning:layoutItem size="6">
                         <lightning:outputField fieldName="Price__c"/>
                     </lightning:layoutItem>
-                    <lightning:layoutItem size="6"  >
+                    <lightning:layoutItem size="6">
                         <lightning:outputField fieldName="Status__c"/>
                     </lightning:layoutItem>
                 </lightning:layout>
